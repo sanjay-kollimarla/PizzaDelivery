@@ -62,13 +62,15 @@ export default function OrderPizza(props) {
                             <div className='row pt-3 pb-3'>
                                 <div className='col-3 d-flex flex-column align-items-center'>
                                     <h3 className='text-center'>{pizzaDetails.name}</h3>
-                                    <div className={pizzaDetails.type === 'veg' ? "bg-success" : "bg-danger"} style={{ height: "15px", width: "15px" }} ></div>
-                                    <p className='fw-bold mt-5'>&#8377;{pizzaDetails.price.toFixed(2)}</p>
+                                    <div className={pizzaDetails.type === 'veg' ? "m-auto d-flex align-items-center justify-content-center border border-success p-3" : "m-auto d-flex align-items-center justify-content-center p-3 border border-danger"} style={{ height: "15px", width: "15px" }}>
+                                        <div className={pizzaDetails.type === 'veg' ? "rounded-circle bg-success p-2" : "rounded-circle bg-danger p-2"}></div>
+                                    </div>
+                                    <p className='fw-bold mt-5 fs-5'>₹{pizzaDetails.price.toFixed(2)}</p>
                                 </div>
                                 <div className='col-6 d-flex flex-column'>
                                     <p>{pizzaDetails.description}</p>
-                                    <p className=''><b>Ingredients:</b> {pizzaDetails.ingredients.join(",")}</p>
-                                    <p className=''><b>Toppings:</b> {pizzaDetails.topping.join(",")}</p>
+                                    <p className=''><b>Ingredients:</b> {pizzaDetails.ingredients.join(", ")}</p>
+                                    <p className=''><b>Toppings:</b> {pizzaDetails.topping.join(", ")}</p>
                                 </div>
                                 <div className='col-3 d-flex flex-column align-items-center jusitfy-content-between gap-3'>
                                     <div className=' w-100' style={{height:"100%", backgroundImage: `url(${pizzaDetails.image})`, backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center"}} ></div>

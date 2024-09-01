@@ -1,6 +1,10 @@
-tr:nth-child(even) {
+tr:nth-child(even), tr:hover {
     background-color: #f2f2f2;
+    cursor: pointer
 }
 td{
   border: 1px solid silver !important;
+}
+label{
+  cursor: pointer
 }

@@ -13,7 +13,7 @@ const Navbar = (props) => {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-black px-3 py-0 ">
             <Link className="navbar-brand"  to="/">
-                <span className='mx-1 me-3 fs-3 my-0' style={{color: 'rgba(255,255,255, 0.55)'}}> Pizzeria</span>
+                <span className='mx-1 me-3 fs-3' style={{color: 'rgba(255,255,255, 0.55)'}}> Pizzeria</span>
                 <img src={logo}  height="50"/>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
