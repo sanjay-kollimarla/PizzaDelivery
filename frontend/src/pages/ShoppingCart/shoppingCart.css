@@ -1,0 +1,4 @@
+tr {
+    max-height: 10vh !important;
+    overflow: auto;
+}
